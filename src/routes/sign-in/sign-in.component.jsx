@@ -5,8 +5,8 @@ import {
 
 const SignIn = () => {
   const logGoogleUser = async () => {
-    const response = await signInWithGooglePopup();
-    createUserProfileDocument(response);
+    const {user} = await signInWithGooglePopup();
+    createUserProfileDocument(user);
   };
 
   return (
